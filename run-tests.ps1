@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 Write-Host 'Executando testes JUnit...'
-mvn test
+mvn clean test
 
 Write-Host 'Executando testes TestNG...'
-mvn -Ptestng test
+mvn -Ptestng clean test
