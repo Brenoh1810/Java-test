@@ -56,6 +56,15 @@ mvn clean test && mvn -Ptestng clean test
 
 O segundo comando só é executado se os testes JUnit forem aprovados.
 
+**Saída detalhada dos testes**
+
+O plugin *maven‑surefire* já está configurado para imprimir:
+- resumo dos testes (`printSummary=true`);
+- stack‑trace completo (`trimStackTrace=false`);
+- saída padrão dos testes no console (`redirectTestOutputToFile=false`).
+
+Essas opções são aplicáveis a ambos os perfis (JUnit 5 e TestNG).
+
 ## Estrutura
 
 - `src/main/java/Frete.java`: classe de produção.
