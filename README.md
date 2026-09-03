@@ -14,6 +14,34 @@ java -version
 mvn -version
 ```
 
+**Instalação das dependências em Windows (PC do zero)**
+
+1. **Git** (necessário para clonar):
+   - Baixe em https://git-scm.com/download/win e siga o instalador padrão.
+   - Verifique com `git --version`.
+
+2. **Java Development Kit (JDK 25)**
+   - Baixe o instalador MSI em https://jdk.java.net/25/ (ou use AdoptOpenJDK).
+   - Execute o instalador e selecione a opção *Set JAVA_HOME*.
+   - Caso não seja adicionado ao `PATH`, execute:
+     ```powershell
+     setx JAVA_HOME "C:\Program Files\Java\jdk-25"
+     setx PATH "%PATH%;%JAVA_HOME%\bin"
+     ```
+   - Verifique: `java -version` → deve mostrar `java version "25"`.
+
+3. **Apache Maven**
+   - Baixe a versão binária zip em https://maven.apache.org/download.cgi.
+   - Extraia para `C:\Program Files\Apache\Maven`.
+   - Adicione ao `PATH`:
+     ```powershell
+     setx MAVEN_HOME "C:\Program Files\Apache\Maven"
+     setx PATH "%PATH%;%MAVEN_HOME%\bin"
+     ```
+   - Verifique: `mvn -version`.
+
+Depois de instalar, confirme as versões como indicado acima antes de executar os testes.
+
 ## PowerShell
 
 Para executar JUnit e depois TestNG:
