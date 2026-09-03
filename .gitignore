@@ -1,0 +1,14 @@
+# Maven build output
+target/
+
+# Local IDE settings
+.vscode/
+.idea/
+*.iml
+
+# Copilot modernization artifacts
+.github/modernize/
+
+# Logs and temporary files
+*.log
+*.tmp
